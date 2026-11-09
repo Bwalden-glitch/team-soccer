@@ -74,7 +74,7 @@
     if (!T.practiceDays && !T.practiceTime) return "";
     return `<div class="when"><span class="ic">🗓️</span><div><span>Practice</span><b>${esc(T.practiceDays || "")}</b><b>${esc(T.practiceTime || "")}</b>${T.practiceNote ? `<span>${esc(T.practiceNote)}</span>` : ""}</div></div>`;
   }
-  if (T.appName) { $("#hdrTitle").textContent = T.appName; document.title = T.appName; }
+  if (T.appName) $("#hdrTitle").textContent = T.appName;
   if (T.practiceDays || T.practiceTime) $("#hdrWhen").textContent = [(T.practiceDays || "").replace(/Mondays/, "Mon").replace(/Fridays/, "Fri").replace(/Tuesdays/, "Tue").replace(/Wednesdays/, "Wed").replace(/Thursdays/, "Thu").replace(/Saturdays/, "Sat").replace(/Sundays/, "Sun"), T.practiceTime].filter(Boolean).join(" · ");
 
   /* ---------- PRACTICE ---------- */
